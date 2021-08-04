@@ -1,7 +1,7 @@
 version: '3.8'
 services:
     core-web:
-        container_name: kkt_core-web
+        container_name: core-web
         build:
             context: ./core-web
             dockerfile: Dockerfile
@@ -13,3 +13,13 @@ services:
             - FORCE_COLOR=true
         ports:
             - 8001:8001
+    react-chat:
+        container_name: react-chat
+        build:
+            context: ./react-chat
+            dockerfile: Dockerfile
+            target: dev
+        image: shawnstewart/react-chat:dev
+        restart: always
+        environment:
+            - NODE_ENV=development

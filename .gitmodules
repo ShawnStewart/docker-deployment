@@ -1,3 +1,6 @@
 [submodule "core-web"]
 	path = core-web
 	url = git@github.com:ShawnStewart/koa-knex-ts.git
+[submodule "react-chat"]
+	path = react-chat
+	url = git@github.com:ShawnStewart/react-chat.git

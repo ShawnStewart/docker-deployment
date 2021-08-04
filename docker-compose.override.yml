@@ -3,4 +3,13 @@ services:
     core-web:
         volumes:
             - ./core-web:/app
-            - ./core-web/node_modules:/app/node_modules
+            - core-web_node-modules:/app/node_modules
+    react-chat:
+        ports:
+            - 3000:3000
+        volumes:
+            - ./react-chat:/app
+            - react-chat_node-modules:/app/node_modules
+volumes:
+    core-web_node-modules:
+    react-chat_node-modules:

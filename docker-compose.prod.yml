@@ -5,4 +5,12 @@ services:
         image: shawnstewart/kkt:latest
         environment:
             - NODE_ENV=production
-            - FORCE_COLOR=false
+    react-chat:
+        build:
+            target: release
+        image: shawnstewart/react-chat:latest
+        environment:
+            - NODE_ENV=production
+        ports:
+            - 3000:80
+
