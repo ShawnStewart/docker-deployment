@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+    core-web:
+        container_name: kkt_core-web
+        build:
+            context: ./core-web
+            dockerfile: Dockerfile
+            target: dev
+        image: shawnstewart/kkt:dev
+        restart: always
+        environment:
+            - NODE_ENV=development
+            - FORCE_COLOR=true
+        ports:
+            - 8001:8001

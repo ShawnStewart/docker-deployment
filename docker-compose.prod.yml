@@ -1,0 +1,8 @@
+services:
+    core-web:
+        build:
+            target: release
+        image: shawnstewart/kkt:latest
+        environment:
+            - NODE_ENV=production
+            - FORCE_COLOR=false
